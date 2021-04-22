@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60346B44-9C0C-45D6-B575-9940206F6360}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PhotoHome</RootNamespace>
+    <AssemblyName>黑蜜蜂</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\WangShun\factory\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bee.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E81DDEE87103D97394B67F56A57CC34B9D397CF0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PhotoHome_WinForm_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonLib">
+      <HintPath>bin\Debug\CommonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperControls">
+      <HintPath>bin\Debug\SuperControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="frmExtendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtendForm.Designer.cs">
+      <DependentUpon>frmExtendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetLayout.Designer.cs">
+      <DependentUpon>frmSetLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSBPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUSBPrompt.Designer.cs">
+      <DependentUpon>frmUSBPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCommonTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCommonTask.Designer.cs">
+      <DependentUpon>frmCommonTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoPanel.Designer.cs">
+      <DependentUpon>frmInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPicTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPicTest.Designer.cs">
+      <DependentUpon>frmPicTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolbarPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolbarPanel.Designer.cs">
+      <DependentUpon>frmToolbarPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaskPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaskPanel.Designer.cs">
+      <DependentUpon>frmTaskPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThumb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThumb.Designer.cs">
+      <DependentUpon>frmThumb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThumbSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThumbSelected.Designer.cs">
+      <DependentUpon>frmThumbSelected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\frmRectTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmRectTest.Designer.cs">
+      <DependentUpon>frmRectTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCommonTask.resx">
+      <DependentUpon>frmCommonTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtendForm.resx">
+      <DependentUpon>frmExtendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoPanel.resx">
+      <DependentUpon>frmInfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPicTest.resx">
+      <DependentUpon>frmPicTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetLayout.resx">
+      <DependentUpon>frmSetLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolbarPanel.resx">
+      <DependentUpon>frmToolbarPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaskPanel.resx">
+      <DependentUpon>frmTaskPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThumb.resx">
+      <DependentUpon>frmThumb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThumbSelected.resx">
+      <DependentUpon>frmThumbSelected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUSBPrompt.resx">
+      <DependentUpon>frmUSBPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="PhotoHome_WinForm_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_info128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_question128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_warning128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bee.ico" />
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PhotoHome.ico" />
+    <None Include="Resources\layoutsimple72.png" />
+    <None Include="Resources\layoutmodern72.png" />
+    <None Include="Resources\layoutclassify72.png" />
+    <None Include="Resources\save72.png" />
+    <None Include="Resources\fullextent72.png" />
+    <None Include="Resources\slideautostop72.png" />
+    <None Include="Resources\slideauto72.png" />
+    <None Include="Resources\pausegreen72.png" />
+    <None Include="Resources\play72.png" />
+    <None Include="Resources\paste72.png" />
+    <None Include="Resources\fullscreen72.png" />
+    <None Include="Resources\folder-yellow72.png" />
+    <None Include="Resources\unselected72.png" />
+    <None Include="Resources\select72.png" />
+    <None Include="Resources\faviratefolder72.png" />
+    <None Include="Resources\close72.png" />
+    <None Include="Resources\snapshot72.png" />
+    <None Include="Resources\stopred72.png" />
+    <None Include="Resources\stopgreen72.png" />
+    <None Include="Resources\rotateimageright72.png" />
+    <None Include="Resources\rotateimageleft72.png" />
+    <None Include="Resources\realsize72.png" />
+    <None Include="Resources\flipver72.png" />
+    <None Include="Resources\fliphor72.png" />
+    <None Include="Resources\folder72.png" />
+    <None Include="Resources\edit_image_76.952380952381px_1210732_easyicon.net.png" />
+    <None Include="Resources\alarm_clock_72px_1210631_easyicon.net.png" />
+    <None Include="Resources\add_database_69.957446808511px_1210625_easyicon.net.png" />
+    <None Include="Resources\Mimes_audio_x_generic_72px_1187157_easyicon.net.png" />
+    <None Include="Resources\Apps_deja_dup_72px_1187087_easyicon.net.png" />
+    <None Include="Resources\Apps_deja_dup_72px_1187087_easyicon.net.jpg" />
+    <None Include="Resources\toolbarbg.png" />
+    <None Include="Resources\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

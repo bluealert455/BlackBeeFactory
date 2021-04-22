@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recents>
+    <RecentItem>
+      <Path>D:\ow.jpg</Path>
+      <AccessTime>2021-04-22T11:33:19.7403848+08:00</AccessTime>
+    </RecentItem>
+    <RecentItem>
+      <Path>D:\oh.jpg</Path>
+      <AccessTime>2020-08-27T11:15:04.0172627+08:00</AccessTime>
+    </RecentItem>
+    <RecentItem>
+      <Path>E:\Work\Pictures\Map</Path>
+      <AccessTime>2020-08-04T11:37:21.5577228+08:00</AccessTime>
+    </RecentItem>
+  </Recents>
+  <SelectedTargetFolder>D:\照片_挑选</SelectedTargetFolder>
+  <AppLayout>1</AppLayout>
+  <SurppotedFileTypes>1</SurppotedFileTypes>
+  <FindInSubFolders>false</FindInSubFolders>
+  <SaveToTargetFolder>true</SaveToTargetFolder>
+</AppConfig>
